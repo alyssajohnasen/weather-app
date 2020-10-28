@@ -95,6 +95,7 @@ h5 {
 footer {
   color: #000000;
   text-align: center;
+  line-height: 0;
 }
 
 a.footer {
