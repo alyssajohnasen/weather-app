@@ -1,31 +1,27 @@
-function formatDate(date) {
-  let currentDate = date.getDate();
-  let hours = date.getHours();
+function formatDate(timestamp) {
+  let currentDate = new Date(timestamp);
+  let date = currentDate.getDate();
+  let hours = currentDate.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = date.getMinutes();
+  let minutes = currentDate.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let year = now.getFullYear();
+  let year = currentDate.getFullYear();
   
   
-  let dayIndex = date.getDay();
+  let dayIndex = currentDate.getDay();
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[dayIndex];
   
   let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-  let month = months[date.getMonth()];
+  let month = months[currentDate.getMonth()];
 
-  return `${day}, ${month} ${currentDate}, ${year} | ${hours}:${minutes}`;
+  return `${day}, ${month} ${date}, ${year} | ${hours}:${minutes}`;
 
 }
-
-let now = new Date();
-let currentTime = document.querySelector("#current-time");
-currentTime.innerHTML = formatDate(now);
-
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
