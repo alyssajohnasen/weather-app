@@ -29,9 +29,12 @@ function displayWeatherCondition(response) {
   document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#max-temp").innerHTML = Math.round(response.data.main.temp_max);
   document.querySelector("#min-temp").innerHTML = Math.round(response.data.main.temp_min);
+  document.querySelector("#feels-like").innerHTML = Math.round(response.data.main.feels_like);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#current-time").innerHTML = formatDate(response.data.dt * 1000);
+  document.querySelector("#current-temp-icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#current-temp-icon").setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {

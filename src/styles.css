@@ -11,11 +11,10 @@ h1 {
   font-size: 50px;
 }
 
-h5 {
-  text-transform: uppercase;
-  font-weight: 100;
-  text-align: center;
-  margin-bottom: 20px;
+.searchIcon {
+  display: inline-block;
+  position: relative;
+  right: 30px;
 }
 
 .lastUpdated {
@@ -42,15 +41,22 @@ h5 {
 
 .currentTemperature {
   font-size: 60px;
+  font-weight: 900;
   position: relative;
   left: 20px;
 }
 
 .units {
   font-size: 20px;
+  font-weight: 900;
   position: relative;
   top: -30px;
   left: 20px;
+}
+
+img.currentTempIcon {
+  display: block;
+  margin: 0 auto;
 }
 
 .fahrenheit,
@@ -60,12 +66,8 @@ h5 {
   transition: all 150ms ease-in-out;
 }
 
-.weatherToday .current-icon {
-  font-size: 60px;
-}
-
 .highLowTemps {
-  margin-top: 10px;
+  margin: 1px auto;
 }
 
 .no-gutters {
@@ -74,6 +76,7 @@ h5 {
 }
 
 .future-weather {
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
   border: 1px solid #dadde1;
   border-radius: 10px;
   padding: 20px;
@@ -88,7 +91,7 @@ h5 {
   border: 1px solid #dadde1;
   border-radius: 10px;
   margin: 20px auto;
-  padding: 50px;
+  padding: 40px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -96,7 +99,7 @@ footer {
   color: #000000;
   text-align: center;
   font-size: 12px;
-  line-height: 0;
+  line-height: 1px;
 }
 
 a.footer {
