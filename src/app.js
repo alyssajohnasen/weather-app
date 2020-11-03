@@ -31,6 +31,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#min-temp").innerHTML = Math.round(response.data.main.temp_min);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#current-time").innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
