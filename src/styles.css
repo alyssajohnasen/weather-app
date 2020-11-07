@@ -54,25 +54,24 @@ h1 {
   left: 20px;
 }
 
+.units a {
+  color: #ffffff;
+}
+
+.units .active {
+  color: #ffffff;
+  cursor: default;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
+
 img.currentTempIcon {
   display: block;
   margin: 0 auto;
-}
-
-.fahrenheit,
-.celsius {
-  color: #ffffff;
-  text-decoration: none;
-  transition: all 150ms ease-in-out;
-}
-
-.highLowTemps {
-  margin: 1px auto;
-}
-
-.no-gutters {
-  text-align: center;
-  margin-top: 10px;
 }
 
 .future-weather {
@@ -110,9 +109,5 @@ a.footer {
 
 a.footer:hover {
   cursor: pointer;
-  text-decoration: underline;
-}
-
-a:active {
   text-decoration: underline;
 }
