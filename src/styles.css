@@ -1,11 +1,11 @@
 body {
   font-family: "Manrope", sans-serif;
   color: #ffffff;
+  text-align: center;
 }
 
 h1 {
   text-transform: uppercase;
-  text-align: center;
   margin-top: 40px;
   font-weight: 900;
   font-size: 50px;
@@ -18,25 +18,18 @@ h1 {
 }
 
 .lastUpdated {
-  text-align: center;
   font-size: 10px;
 }
 
 .currentDateTime {
-  text-align: center;
   font-size: 18px;
 }
 
 .currentForecast {
-  text-align: center;
   text-transform: capitalize;
   margin-top: 5px;
   font-size: 18px;
   font-weight: 900;
-}
-
-.weatherToday {
-  text-align: center;
 }
 
 .currentTemperature {
@@ -54,15 +47,10 @@ h1 {
   left: 20px;
 }
 
-.units a {
-  color: #ffffff;
-}
-
 .units .active {
   color: #ffffff;
   cursor: default;
   font-weight: 900;
-  text-decoration: underline;
 }
 
 .units .active:hover {
@@ -74,7 +62,7 @@ img.currentTempIcon {
   margin: 0 auto;
 }
 
-.future-weather {
+.weather-forecast {
   background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
   border: 1px solid #dadde1;
   border-radius: 10px;
@@ -82,6 +70,22 @@ img.currentTempIcon {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
   text-transform: uppercase;
+}
+
+.weather-forecast h5 {
+  font-size: 14px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  font-size: 12px;
 }
 
 .container {
