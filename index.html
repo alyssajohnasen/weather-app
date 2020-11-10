@@ -7,7 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/616b5dea9a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="src/styles.css" />
   <title>Weather App</title>
@@ -44,15 +44,16 @@
     <div class="currentDateTime" id="current-time">
     </div>
 
-    <div class="currentForecast" id="current-forecast-description"></div>
+    <div class="description" id="current-forecast-description"></div>
 
+    <strong><span class="currentTemperature" id="current-temperature"></span></strong>
+    <span class="units">
+      <a href="#" id="fahrenheit-link" class="active">°F</a> |
+      <a href="#" id="celsius-link">°C</a>
+    </span>
+    <img src="" alt="icon" class="currentTempIcon" id="current-temp-icon">
+    
     <div class="weatherToday">
-      <strong><span class="currentTemperature" id="current-temperature"></span></strong>
-      <span class="units">
-        <a href="#" id="fahrenheit-link" class="active">°F</a> |
-        <a href="#" id="celsius-link">°C</a>
-      </span>
-      <img src="" alt="icon" class="currentTempIcon" id="current-temp-icon">
       <div class="feelsLike">Feels Like: <span class="feelsLike" id="feels-like"></span>°</div>
 
       <div class="highLowTemps">

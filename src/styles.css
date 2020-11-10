@@ -1,14 +1,14 @@
 body {
-  font-family: "Manrope", sans-serif;
   color: #ffffff;
+  font-family: "Manrope", sans-serif;
   text-align: center;
 }
 
 h1 {
+  font-size: 45px;
+  font-weight: 500;
   text-transform: uppercase;
-  margin-top: 40px;
-  font-weight: 900;
-  font-size: 50px;
+  margin-top: 35px;
 }
 
 .searchIcon {
@@ -23,28 +23,29 @@ h1 {
 
 .currentDateTime {
   font-size: 18px;
+  font-weight: 200;
 }
 
-.currentForecast {
-  text-transform: capitalize;
-  margin-top: 5px;
+.description {
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 200;
+  margin-top: 5px;
+  text-transform: capitalize;
 }
 
 .currentTemperature {
   font-size: 60px;
   font-weight: 900;
-  position: relative;
   left: 20px;
+  position: relative;
 }
 
 .units {
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 400;
+  left: 20px;
   position: relative;
   top: -30px;
-  left: 20px;
 }
 
 .units .active {
@@ -62,47 +63,54 @@ img.currentTempIcon {
   margin: 0 auto;
 }
 
+.weatherToday {
+  font-weight: 200;
+}
+
 .weather-forecast {
   background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
   border: 1px solid #dadde1;
   border-radius: 10px;
-  padding: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .weather-forecast h5 {
   font-size: 14px;
+  font-weight: 200;
+  text-align: center;
 }
 
 .weather-forecast img {
   display: block;
-  margin: 0 auto;
   height: 48px;
+  margin: 0 auto;
   width: 48px;
 }
 
 .weather-forecast-temperature {
-  text-align: center;
   font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .container {
-  max-width: 600px;
   background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
   border: 1px solid #dadde1;
   border-radius: 10px;
-  margin: 20px auto;
-  padding: 40px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 35px;
 }
 
 footer {
   color: #000000;
-  text-align: center;
   font-size: 12px;
   line-height: 1px;
+  text-align: center;
 }
 
 a.footer {
