@@ -55,7 +55,7 @@ function displayForecast(response) {
         </h5>
         <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" />
         <div class="weather-forecast-temperature">
-          <strong>${Math.round(forecast.main.temp_max)}°</strong> / ${Math.round(forecast.main.temp_min)}°
+          <strong><span id="forecast-max">${Math.round(forecast.main.temp_max)}</span>°</strong> / <span id="forecast-min">${Math.round(forecast.main.temp_min)}</span>°
         </div>
     </div>`;
     
@@ -101,6 +101,21 @@ function displayCelsius(event) {
   document.querySelector("#feels-like").innerHTML = Math.round((feelsLikeElement - 32) * 5 / 9);
   document.querySelector("#max-temp").innerHTML = Math.round((maxTemp - 32) * 5 / 9);
   document.querySelector("#min-temp").innerHTML = Math.round((minTemp - 32) * 5 / 9);
+  
+  let forecastMax = document.querySelectorAll("#forecast-max");
+  forecastMax.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round((currentTemp - 32) * 5 / 9);
+  });
+
+  let forecastMin = document.querySelectorAll("#forecast-min");
+  forecastMin.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round((currentTemp - 32) * 5 / 9);
+  });
+
+  celsiusLink.removeEventListener("click", displayCelsius);
+  fahrenheitLink.addEventListener("click", displayFahrenheit);
 }
 
 function displayFahrenheit(event) {
@@ -112,6 +127,21 @@ function displayFahrenheit(event) {
   document.querySelector("#feels-like").innerHTML = Math.round(feelsLikeElement);
   document.querySelector("#max-temp").innerHTML = Math.round(maxTemp);
   document.querySelector("#min-temp").innerHTML = Math.round(minTemp);
+  
+  let forecastMax = document.querySelectorAll("#forecast-max");
+  forecastMax.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  let forecastMin = document.querySelectorAll("#forecast-min");
+  forecastMin.forEach(function (item) {
+    let currentTemp = item.innerHTML;
+    item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  fahrenheitLink.removeEventListener("click", displayFahrenheit);
+  celsiusLink.addEventListener("click", displayCelsius);
 }
 
 let fahrenheitTemperature = null;

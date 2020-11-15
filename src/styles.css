@@ -93,7 +93,6 @@ img.currentTempIcon {
 .weather-forecast-temperature {
   font-size: 12px;
   text-align: center;
-  white-space: nowrap;
 }
 
 .container {
