@@ -32,6 +32,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#current-forecast-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#current-temperature").innerHTML = Math.round(fahrenheitTemperature);
   document.querySelector("#feels-like").innerHTML = Math.round(feelsLikeElement);
+  document.querySelector("#sunrise").innerHTML = formatHours(response.data.sys.sunrise * 1000);
+  document.querySelector("#sunset").innerHTML = formatHours(response.data.sys.sunset * 1000);
   document.querySelector("#max-temp").innerHTML = Math.round(maxTemp);
   document.querySelector("#min-temp").innerHTML = Math.round(minTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
