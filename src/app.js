@@ -27,6 +27,7 @@ function displayWeatherCondition(response) {
   feelsLikeElement = response.data.main.feels_like;
   maxTemp = response.data.main.temp_max;
   minTemp = response.data.main.temp_min;
+  windSpeed = response.data.wind.speed;
   
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-forecast-description").innerHTML = response.data.weather[0].description;
@@ -37,7 +38,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#max-temp").innerHTML = Math.round(maxTemp);
   document.querySelector("#min-temp").innerHTML = Math.round(minTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#wind").innerHTML = `${Math.round(windSpeed)} mph`;
   document.querySelector("#current-time").innerHTML = formatDate(response.data.dt * 1000);
   document.querySelector("#current-temp-icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#current-temp-icon").setAttribute("alt", response.data.weather[0].description);
@@ -103,6 +104,7 @@ function displayCelsius(event) {
   document.querySelector("#feels-like").innerHTML = Math.round((feelsLikeElement - 32) * 5 / 9);
   document.querySelector("#max-temp").innerHTML = Math.round((maxTemp - 32) * 5 / 9);
   document.querySelector("#min-temp").innerHTML = Math.round((minTemp - 32) * 5 / 9);
+  document.querySelector("#wind").innerHTML = `${Math.round(windSpeed * 1.609)} km/h`;
   
   let forecastMax = document.querySelectorAll("#forecast-max");
   forecastMax.forEach(function (item) {
@@ -129,6 +131,7 @@ function displayFahrenheit(event) {
   document.querySelector("#feels-like").innerHTML = Math.round(feelsLikeElement);
   document.querySelector("#max-temp").innerHTML = Math.round(maxTemp);
   document.querySelector("#min-temp").innerHTML = Math.round(minTemp);
+  document.querySelector("#wind").innerHTML = `${Math.round(windSpeed)} mph`;
   
   let forecastMax = document.querySelectorAll("#forecast-max");
   forecastMax.forEach(function (item) {
@@ -150,6 +153,7 @@ let fahrenheitTemperature = null;
 let feelsLikeElement = null;
 let maxTemp = null;
 let minTemp = null;
+let windSpeed = null;
 
 let searchForm = document.querySelector("#search-engine");
 searchForm.addEventListener("submit", handleSubmit);
